@@ -1,3 +1,5 @@
 rootProject.name = 'orepj'
 
+// 基本的にPJ参照はincludeだけあればOK
 include('sub-simple')
+include('parent_module:child_module')
