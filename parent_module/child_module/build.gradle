@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'jp.sample.orepj.parent_module.child_module'
+version = '0.0.1-SNAPSHOT'
+description = 'Parent Module in Child Module'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.3'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
